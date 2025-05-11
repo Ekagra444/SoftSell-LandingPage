@@ -5,6 +5,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import Navbar from "@/components/Navbar"
 import Footer from "@/components/Footer"
 import type { Metadata } from "next"
+import CursorAura from "@/components/cursorAura"
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -35,6 +36,7 @@ export default function RootLayout({
       <body className={`${inter.variable} ${poppins.variable} ${inter.className}`}>
         <ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange>
           <Navbar />
+          <CursorAura />
           {children}
           <Footer />
         </ThemeProvider>
